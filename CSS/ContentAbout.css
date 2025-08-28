@@ -1,0 +1,96 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400');
+* {
+  margin-top: 50px;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: 'Poppins', sans-serif;
+}
+.Mtext{
+    font-size: 60px;
+    margin-top: 50px;
+    padding: 5px 0px;
+    text-align: center;
+    opacity: 0; /* Initially hide the text */
+    transform: translateY(-100%); /* Move the text above the viewport */
+    animation: slideDown 2s ease forwards; /* Apply animation */
+}
+
+
+@keyframes slideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%); /* Start position above the viewport */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* End position at the top of the viewport */
+    }
+}
+
+.flex-container1 {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    }
+    #organic{
+        color: black;
+    }
+    .img1 {
+    flex: 1;
+    margin-right: 20px; 
+    
+    }
+    
+    .img1 img {
+    max-width: 100%; 
+    height: auto; 
+    }
+    
+    .content1 {
+    flex: 2; 
+    text-align: left;
+    padding-left: 20px; 
+    }
+    
+    .flex-container2 {
+    display: flex;
+    background-color: #cde6d0; 
+    padding: 20px;
+    }
+    
+    .img2 {
+    flex: 1;
+    
+    }
+    
+    .img2 img {
+    max-width: 90%; 
+    height: auto; 
+    }
+    
+    .content2 {
+    flex: 1;
+    text-align: left;
+    }
+    @media only screen and (max-width: 768px) {
+    .flex-container1,
+    .flex-container2 {
+    flex-direction: column;
+    }
+    
+    .img1,
+    .img2 {
+    max-width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+    }
+    
+    .content1,
+    .content2 {
+    padding-left: 0;
+    margin-right: 0;
+    }
+    }
+    

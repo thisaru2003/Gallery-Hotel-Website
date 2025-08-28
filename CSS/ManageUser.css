@@ -1,0 +1,40 @@
+
+body {
+    font-family: Arial, sans-serif;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+.status-active {
+    color: green;
+}
+
+.status-inactive {
+    color: red;
+}
+
+button {
+    padding: 5px 10px;
+}
+.back-btn {
+display: inline-block;
+padding: 10px 20px;
+background-color: #0a043b;
+color: white;
+text-decoration: none;
+border-radius: 5px;
+position: fixed;
+bottom: 20px;
+right: 20px;
+}

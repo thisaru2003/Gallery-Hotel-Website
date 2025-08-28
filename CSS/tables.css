@@ -1,0 +1,213 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f5f5f5;
+}
+
+.Mtext {
+    font-size: 60px;
+    margin-top: 100px;
+    padding: 5px 0px;
+    text-align: center;
+    opacity: 0; /* Initially hide the text */
+    transform: translateY(-100%); /* Move the text above the viewport */
+    animation: slideDown 2s ease forwards; /* Apply animation */
+}
+
+@keyframes slideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%); /* Start position above the viewport */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* End position at the top of the viewport */
+    }
+}
+
+
+/* Tables container */
+#tables-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Table card styling */
+.table-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: #fff;
+}
+
+/* Dark mode for table cards */
+body.dark-mode .table-card {
+    background-color: #1e1e1e; /* Dark card background */
+    color: #ccc; /* Light text for card content */
+    border: 1px solid #333;
+}
+
+.table-card img {
+    width: 100%;
+    height: auto;
+}
+
+.table-card .description {
+    padding: 15px;
+}
+
+.table-card .description h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+/* Dark mode description text */
+body.dark-mode .table-card .description p {
+    color: #bbbbbb; /* Light text in dark mode */
+}
+
+.table-card .description button {
+    background-color: #101280;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.table-card .description button:hover {
+    background-color: #0f3761;
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+}
+
+/* Dark mode modal */
+body.dark-mode .modal-content {
+    background-color: #222; /* Dark background for modal */
+    color: #ccc; /* Light text in modal */
+    border: 1px solid #444;
+}
+
+/* Close button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Form styles */
+#reserve-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#reserve-form label {
+    font-weight: bold;
+}
+
+/* Dark mode form styles */
+body.dark-mode #reserve-form label {
+    color: #cccccc; /* Light text for form labels */
+}
+
+#reserve-form input[type="text"],
+#reserve-form input[type="date"],
+#reserve-form input[type="number"],
+#reserve-form select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #000;
+    background-color: #fff;
+}
+
+/* Dark mode form input styles */
+body.dark-mode #reserve-form input[type="text"],
+body.dark-mode #reserve-form input[type="date"],
+body.dark-mode #reserve-form input[type="number"],
+body.dark-mode #reserve-form select {
+    background-color: #333; /* Dark input background */
+    color: #ffffff; /* Light text */
+    border: 1px solid #555; /* Darker border */
+}
+
+#reserve-form button[type="submit"] {
+    background-color: #121a88;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+#reserve-form button[type="submit"]:hover {
+    background-color: #281b70;
+}
+
+/* Dark mode submit button */
+body.dark-mode #reserve-form button[type="submit"] {
+    background-color: #1414d9;
+}
+
+/* Responsive design */
+@media screen and (max-width: 600px) {
+    .modal-content {
+        width: 95%;
+    }
+
+    #reserve-form input,
+    #reserve-form select,
+    #reserve-form button {
+        font-size: 14px;
+    }
+}
